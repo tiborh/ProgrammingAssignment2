@@ -1,7 +1,7 @@
 ## The functions do nothing else than the example
 ## makeVector and cachemean functions (which actually also work for matrices
 ## the only difference is that all "mean" have been replaced with "inverse"
-## and invert
+## and one case of "solve" (ln 35)
 
 ## caching does not work directly on matrices
 ## a special cacheMatrix is needed for that purpose
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve, when called upon a cacheMatrix first,
 ## it creates the cached invert matrix which is retrieved
-## at every further calls
+## at every further call
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
